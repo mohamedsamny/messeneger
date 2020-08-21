@@ -25,6 +25,7 @@ function finishSetup() {
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(express.static("public"));
 
+  app.engine('ejs', require('ejs-locals'));
   app.set("view engine", "ejs");
 
   routes(app);
